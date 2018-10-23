@@ -1,7 +1,7 @@
 # Template file for 'dvdauthor'
-pkgname="dvdauthor"
-version="0.7.2"
-revision=1
+pkgname=dvdauthor
+version=0.7.2
+revision=2
 build_style=gnu-configure
 wrksrc="${pkgname}"
 hostmakedepends="pkg-config"
