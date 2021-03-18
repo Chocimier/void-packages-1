@@ -41,7 +41,7 @@ If `xlint` reports any issues, resolve them before committing.
 
 ### Committing your changes
 
-Once you have built your template file or files, the commit message should have one of the following forms:
+Once you have built your template file or files, make one commit per template. Message should have one of the following forms:
 
 * for new packages, use ```New package: <pkgname>-<version>``` ([example](https://github.com/void-linux/void-packages/commit/176d9655429188aac10cd229827f99b72982ab10)).
 
