@@ -1,7 +1,7 @@
 # Template file for 'iscan'
 pkgname=iscan
 version=2.30.4
-revision=1
+revision=2
 _srcrev=2
 archs="i686 x86_64"
 build_style=gnu-configure
@@ -28,6 +28,7 @@ post_install() {
 	vmkdir usr/lib/gimp/2.0/plug-ins
 	ln -s /usr/bin/iscan ${DESTDIR}/usr/lib/gimp/2.0/plug-ins
 	vinstall iscan.desktop 644 usr/share/applications
+	vdoc ${FILESDIR}/README.voidlinux
 }
 
 sane-epkowa_package() {
