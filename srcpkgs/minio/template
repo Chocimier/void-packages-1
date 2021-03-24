@@ -1,7 +1,7 @@
 # Template file for 'minio'
 pkgname=minio
 version=2021.03.17
-revision=1
+revision=2
 _version="${version//./-}T02-33-02Z"
 wrksrc=${pkgname}-RELEASE.${_version}
 build_style=go
