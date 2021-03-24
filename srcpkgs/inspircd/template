@@ -1,7 +1,7 @@
 # Template file for 'inspircd'
 pkgname=inspircd
 version=3.8.1
-revision=2
+revision=3
 build_style=gnu-makefile
 hostmakedepends="perl pkg-config"
 makedepends="geoip-devel openssl-devel sqlite-devel gnutls-devel"
@@ -44,6 +44,7 @@ do_configure() {
 
 post_install() {
 	vsv inspircd
+	vsconf "${DESTDIR}/etc/inspircd/examples/*"
 	rm ${DESTDIR}/usr/${pkgname}
 	rm ${DESTDIR}/usr/inspircd.service
 }
