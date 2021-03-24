@@ -1,7 +1,7 @@
 # Template file for 'orientdb'
 pkgname=orientdb
 version=2.2.29
-revision=2
+revision=3
 archs="i686 x86_64"
 conf_files="/etc/${pkgname}/*"
 wrksrc="${pkgname}-community-${version}"
@@ -31,4 +31,5 @@ do_install() {
 	ln -s /var/lib/orientdb "${DESTDIR}/usr/lib/orientdb/databases"
 	vcopy * usr/lib/orientdb
 	vsv orientdb
+	vdoc ${FILESDIR}/README.voidlinux
 }
