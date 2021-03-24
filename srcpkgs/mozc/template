@@ -1,7 +1,7 @@
 # Template file for 'mozc'
 pkgname=mozc
 version=2.23.2815.102
-revision=10
+revision=11
 create_wrksrc=yes
 build_wrksrc=mozc/src
 hostmakedepends="gettext ninja pkg-config protobuf protobuf-devel python which"
@@ -99,6 +99,7 @@ ibus-mozc_package() {
 			vinstall "${i}" 644 usr/share/ibus-mozc "${i##*/ui-}"
 		done
 		vinstall out_linux/Release/mozc_renderer 755 usr/lib/mozc
+		vdoc ${FILESDIR}/${pkgname}.README.voidlinux README.voidlinux
 	}
 }
 
@@ -108,6 +109,7 @@ emacs-mozc_package() {
 	pkg_install() {
 		vbin out_linux/Release/mozc_emacs_helper
 		vinstall unix/emacs/mozc.el 644 usr/share/emacs/site-lisp/emacs-mozc
+		vdoc ${FILESDIR}/${pkgname}.README.voidlinux README.voidlinux
 	}
 }
 
