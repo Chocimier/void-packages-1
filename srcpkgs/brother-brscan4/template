@@ -1,7 +1,7 @@
 # Template file for 'brother-brscan4'
 pkgname=brother-brscan4
 version=0.4.9
-revision=1
+revision=2
 archs="i686 x86_64"
 hostmakedepends="rpmextract"
 depends="sane"
@@ -65,6 +65,8 @@ do_install() {
 	# Install the licenses.
 	vlicense ${FILESDIR}/agree.html LICENSE.html
 	vlicense opt/brother/scanner/brscan4/doc/brscan4/readme.txt # Independent JPEG blurb.
+
+	vdoc ${FILESDIR}/README.voidlinux
 
 	# config helper - installed by the deb package as a symlink.
 	vbin opt/brother/scanner/brscan4/brsaneconfig4
