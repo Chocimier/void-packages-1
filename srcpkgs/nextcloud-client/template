@@ -1,7 +1,7 @@
 # Template file for 'nextcloud-client'
 pkgname=nextcloud-client
-version=3.1.2
-revision=2
+vrsion=3.1.2
+revision=3
 wrksrc="desktop-${version}"
 build_style=cmake
 configure_args="-Wno-dev -DNO_SHIBBOLETH=True"
@@ -59,6 +59,10 @@ nextcloud-client-kwallet_package() {
 		     ${DESTDIR}/usr/share/applications/nextcloud-kwallet.desktop
 		vdoc ${FILESDIR}/kwallet/README.voidlinux
 	}
+}
+
+post_install() {
+	vdoc ${FILESDIR}/README.voidlinux
 }
 
 nextcloud-client-dolphin_package() {
