@@ -1,7 +1,7 @@
 # Template file for 'lyx'
 pkgname=lyx
 version=2.3.6.1
-revision=1
+revision=2
 build_style=gnu-configure
 configure_args="--enable-qt5 --without-included-mythes --without-included-boost"
 hostmakedepends="pkg-config bc qt5-devel"
@@ -14,3 +14,7 @@ homepage="https://www.lyx.org/Home"
 distfiles="https://ftp.lip6.fr/pub/lyx/stable/2.3.x/${pkgname}-${version}.tar.gz"
 checksum=6d6f5458ebaac644cdfa35114d029e9ec57b4d930268d6d40bd9795d5c7e7929
 python_version=3
+
+post_install() {
+	vdoc ${FILESDIR}/README.voidlinux
+}
