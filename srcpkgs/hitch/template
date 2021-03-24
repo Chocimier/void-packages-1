@@ -1,7 +1,7 @@
 # Template file for 'hitch'
 pkgname=hitch
 version=1.5.2
-revision=3
+revision=4
 build_style=gnu-configure
 configure_args="ac_cv_so_reuseport_works=yes ac_cv_so_tfo=yes"
 hostmakedepends="pkg-config automake"
@@ -29,6 +29,7 @@ pre_configure() {
 post_install() {
 	vman hitch.8
 	vman hitch.conf.5
+	vdoc ${FILESDIR}/README.voidlinux
 	vlicense LICENSE
 	vsv hitch
 }
