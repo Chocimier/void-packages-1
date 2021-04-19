@@ -36,7 +36,6 @@ jobs:
         BOOTSTRAP: '${{ matrix.config.bootstrap }}'
         TEST: '${{ matrix.config.test }}'
         HOSTREPO: /hostrepo
-        XBPS_BUILD_ENVIRONMENT: void-packages-ci
 
     strategy:
       fail-fast: false

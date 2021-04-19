@@ -606,10 +606,15 @@ patches to the package sources during `do_patch()`. Patches are stored in
 - `disable_parallel_build` If set the package won't be built in parallel
 and `XBPS_MAKEJOBS` has no effect.
 
-- `make_check` Sets the cases in which the `check` phase is run. Can be `yes` (the default) to run if
-`XBPS_CHECK_PKGS` is set, `extended` to run if `XBPS_CHECK_PKGS` is `full` and `no` to never run.
+- `make_check` Sets the cases in which the `check` phase is run.
 This option should usually be accompanied by a comment explaining why it was set, especially when
 set to `no`.
+Allowed values are:
+  - `yes` (the default) to run if `XBPS_CHECK_PKGS` is set.
+  - `extended` to run if `XBPS_CHECK_PKGS` is `full`.
+  - `ci-skip` to run locally if `XBPS_CHECK_PKGS` is set, but not as part of pull request checks.
+  - `no` to never run.
+
 
 - `keep_libtool_archives` If enabled the `GNU Libtool` archives won't be removed. By default those
 files are always removed automatically.

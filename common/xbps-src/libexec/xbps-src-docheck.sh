@@ -47,6 +47,8 @@ if [ "$make_check" = ci-skip ] && [ "$XBPS_BUILD_ENVIRONMENT" = void-packages-ci
     msg_normal \
         "${pkgname}-${version}_${revision}: skipping check (make_check=ci-skip and XBPS_BUILD_ENVIRONMENT=void-packages-ci) ...\n"
     exit 0
+else
+    msg_normal "$(env)\n"
 fi
 
 for f in $XBPS_COMMONDIR/environment/check/*.sh; do
