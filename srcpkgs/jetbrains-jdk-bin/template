@@ -1,6 +1,6 @@
 # Template file for 'jetbrains-jdk-bin'
 pkgname=jetbrains-jdk-bin
-version=11.0.10b1379.1
+version=11.0.10.1b1379.1
 revision=1
 archs="x86_64"
 wrksrc="jbrsdk"
