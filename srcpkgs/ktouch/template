@@ -1,6 +1,6 @@
 # Template file for 'ktouch'
 pkgname=ktouch
-version=20.12.2
+version=21.04.1
 revision=1
 build_style=cmake
 hostmakedepends="extra-cmake-modules kconfig kcoreaddons kdoctools
@@ -15,4 +15,4 @@ maintainer="1is7ac3 <isaac.qa13@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://kde.org/applications/en/education/org.kde.ktouch"
 distfiles="${KDE_SITE}/release-service/${version}/src/ktouch-${version}.tar.xz"
-checksum=76c80e85dcd30704341a5ed997915321a5daf2fc32f38ed2c2db59f84afd7d48
+checksum=2286f88caa668512322d5d72f2211c6c474c909089c238113c866b73f08ed8d5
